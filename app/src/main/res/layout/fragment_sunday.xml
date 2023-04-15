@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.schedule.fragments.SundayFragment">
+    <com.sn.lib.NestedProgress
+        android:id="@+id/custom_Loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:innerAnimInterpolator="anticipate"
+        app:outerAnimInterpolator="overshoot"
+        android:visibility="visible"
+        app:outerLoaderAnimDuration="1500"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Sunday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_Sunday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="center|bottom"
+        android:contentDescription="extended_fab_content_desc"
+        android:text="Extra Lectures"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/blue"
+        app:icon="@drawable/ic_baseline_star_24"
+        app:iconTint="@color/white"/>
+
+    <ImageView
+        android:id="@+id/sun"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:visibility="visible"
+        android:src="@drawable/holiday"
+        android:contentDescription="TODO" />
+
+</FrameLayout>

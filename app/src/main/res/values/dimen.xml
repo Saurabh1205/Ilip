@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="text_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="desc_padding">40dp</dimen>
+    <dimen name="text_view_height">30dp</dimen>
+    <dimen name="text_size">12sp</dimen>
+    <dimen name="text_size_small">10sp</dimen>
+    <dimen name="text_size_heading">14dp</dimen>
+
+    <dimen name="buttom_actionbar_height">38dp</dimen>
+
+    <dimen name="folder_cover_size">72dp</dimen>
+
+    <dimen name="recyclerview_fast_scroller_width">16dp</dimen>
+
+    <dimen name="otp_view_item_size">48dp</dimen>
+    <dimen name="otp_view_item_spacing">5dp</dimen>
+    <dimen name="otp_view_item_line_width">2dp</dimen>
+    <dimen name="otp_view_cursor_width">2dp</dimen>
+
+</resources>

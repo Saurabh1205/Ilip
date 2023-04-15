@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/galleryCard"
+    app:cardElevation="10dp"
+    android:layout_margin="10dp"
+    android:clickable="true"
+    android:background="@drawable/gallery_card_bg_img"
+    android:outlineSpotShadowColor="@color/blue">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gallery_card_bg_img"
+        android:padding="20dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:id="@+id/GalleryName"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                android:id="@+id/GalleryDateTime"
+                android:layout_width="match_parent"
+                android:textSize="14sp"
+                android:drawableLeft="@drawable/ic_baseline_calendar_24"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <Gallery
+            android:id="@+id/languagesGallery"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:animationDuration="2000"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:padding="10dp"
+            android:spacing="10dp"
+
+            android:clickable="false"
+            android:focusable="false"
+            android:unselectedAlpha="50" />
+        <!-- <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+             <ImageView
+                 android:layout_width="100dp"
+                 android:layout_height="70dp"
+                 android:layout_margin="10dp"
+                 android:layout_weight="1"
+                 android:background="@drawable/album_thumb"/>
+             <ImageView
+                 android:layout_width="100dp"
+                 android:layout_height="70dp"
+                 android:layout_margin="10dp"
+                 android:layout_weight="1"
+                 android:background="@drawable/album_thumb"/>
+             <ImageView
+                 android:layout_width="100dp"
+                 android:layout_height="70dp"
+                 android:layout_margin="10dp"
+                 android:layout_weight="1"
+                 android:background="@drawable/album_thumb"/>
+
+        </LinearLayout>-->
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardEvent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:padding="0dp">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="5dp"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/eventImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/album_thumb"
+                android:scaleType="fitXY" />
+        </com.google.android.material.card.MaterialCardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="14dp"
+                android:id="@+id/eventDetails"
+                android:text="TextAppearance.AppCompat.Widget.ActionBar.Subtitle
+
+                android:layout_height=wrap_content"/>
+            <TextView
+                android:id="@+id/eventLocation"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                android:textSize="10dp"
+                android:text="Nagpur"
+                />
+            <TextView
+                android:id="@+id/eventDateTime"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12 jan 2022 . 12:00 AM"
+                android:drawableLeft="@drawable/ic_baseline_calendar_24"
+                android:drawablePadding="5dp"
+                android:textSize="10dp"
+                android:padding="5dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/status"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="1.25"
+            android:layout_gravity="center|top"
+            android:src="@drawable/completed"
+            android:contentDescription="TODO" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                android:id="@+id/Trans_No"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textColor="@color/blue"
+                android:text="12346578"/>
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                android:id="@+id/order_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:drawablePadding="4sp"
+                android:drawableLeft="@drawable/order_approve"
+                android:text="234545"/>
+            <TextView
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                android:id="@+id/Trans_Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:drawableLeft="@drawable/ic_baseline_calendar_24"
+                android:drawablePadding="5sp"
+                android:text="22/04/2022"/>
+            <TextView
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                android:id="@+id/Trans_Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:drawableLeft="@drawable/icon_time"
+                android:drawablePadding="5sp"
+                android:text="12:1:25"/>
+        </LinearLayout>
+        <TextView
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+            android:id="@+id/bank_Ref_No"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.05"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:text="234545"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.20"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                android:id="@+id/Amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:text="234545"/>
+            <TextView
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                android:id="@+id/Receipt_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:drawablePadding="1sp"
+                android:drawableLeft="@drawable/receipt_icon_o__1"
+                android:text="234545"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

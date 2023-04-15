@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.dashboard.otherLinks.gallery.GalleryViewActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar4GalleryView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_new"
+            >
+            <!--<TextView
+                android:id="@+id/titleBar"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Gallery View"
+                android:textColor="#4f4f4f"
+                />-->
+        </com.google.android.material.appbar.MaterialToolbar>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1sp"
+            android:background="@color/ColorGrey"
+            android:layout_margin="5dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/previewImage"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:layout_weight="3"
+                android:scaleType="fitXY"
+                android:contentDescription="TODO" />
+
+            <Gallery
+                android:id="@+id/PreviewGallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:animationDuration="2000"
+                android:gravity="bottom"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:spacing="5dp"
+                android:unselectedAlpha="50"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.attendance.subjectWise.subjectAndProfessorActivity.SubjectScreenActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarForSubjcet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_new">
+            <TextView
+                android:id="@+id/subjectName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subject Details"
+                android:textSize="14dp"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Present "
+                            android:textColor="@color/folder_text_color"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/daysAttend"
+                            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20"
+                            android:textColor="@color/dashColorRed"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/" />
+
+                        <TextView
+                            android:id="@+id/dayOutOff"
+                            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="30"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Total Period"
+                            android:textColor="@color/folder_text_color"
+                            android:textSize="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center|right">
+
+                            <TextView
+                                android:id="@+id/percentage"
+                                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="60%"
+                                android:textColor="@color/dashColorRed"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" Subj Attendance"
+                                android:textColor="@color/folder_text_color"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+
+                        <TextView
+                            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:drawableLeft="@drawable/conducted_svg_o_"
+                            android:drawablePadding="2dp"
+                            android:gravity="center|start"
+                            android:padding="1dp"
+                            android:text="Conducted"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Not Conducted"
+                            android:padding="1dp"
+                            android:gravity="center|start"
+                            android:drawableLeft="@drawable/not_conducted_svg__o_"
+                            android:drawablePadding="2dp"
+                            android:textSize="12dp"/>
+                        <TextView
+                            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                            android:layout_weight="1"
+                            android:padding="1dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Yet to Update"
+                            android:gravity="center|start"
+                            android:drawableLeft="@drawable/yet_to_update_svg__o__"
+                            android:drawablePadding="2dp"
+                            android:textSize="12dp"/>
+                        <TextView
+                            android:id="@+id/expanded_menu"
+                            android:drawableLeft="@drawable/ic_baseline_expand_circle_down_24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/expandLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="5dp"
+                        android:visibility="gone">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="0dp">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/conducted_svg_o_"
+                                android:contentDescription="TODO" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="10dp"
+                                >
+                                <TextView
+                                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Conducted"
+                                    android:padding="1dp"
+                                    android:textSize="12dp"/>
+                                <TextView
+                                    android:id="@+id/conductText"
+                                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/dashColorGreen"
+                                    android:textSize="10dp"
+                                    android:padding="1dp"
+                                    android:text="PR::Present,AB::Absent,S-LV::S-Leave"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/fadetextcolor"
+                            android:layout_margin="5dp"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/not_conducted_svg__o_"
+                                android:contentDescription="TODO" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="10dp">
+                                <TextView
+                                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Not Conducted"
+                                    android:padding="1dp"
+                                    android:textSize="12dp"/>
+                                <TextView
+                                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#DB7E29"
+                                    android:textSize="10dp"
+                                    android:padding="1dp"
+                                    android:text="CA :: Class Absenteeism, CW :: College/Class Work, BK :: Bunk, H :: Holiday, CE :: College Event, F-LV :: Faculty Leave."/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/fadetextcolor"
+                            android:layout_margin="5dp"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/yet_to_update_svg__o__"
+                                android:contentDescription="TODO" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="10dp">
+                                <TextView
+                                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yet to Update"
+                                    android:textSize="12dp"/>
+                                <TextView
+                                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="10dp"
+                                    android:padding="1dp"
+                                    android:textColor="@color/normal_text_color"
+                                    android:text="NU :: Not Updated.For any reason faculty is unable to mark status."/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/subjectTeacherList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <com.sn.lib.NestedProgress
+                android:id="@+id/custom_Loader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:innerAnimInterpolator="anticipate"
+                app:outerAnimInterpolator="overshoot"
+                app:outerLoaderAnimDuration="1500"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/SubjectDetailsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

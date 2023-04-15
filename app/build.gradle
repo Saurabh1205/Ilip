@@ -1,0 +1,65 @@
+plugins {
+    id 'com.android.application'
+   // id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.example.ilip'
+    compileSdk 33
+    defaultConfig {
+        applicationId "com.example.ilip"
+        minSdk 23
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+//    implementation 'com.android.support:appcompat-v7:32.0.0'
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-messaging:23.1.1'
+    implementation 'com.google.firebase:firebase-inappmessaging-display:20.2.0'
+    implementation platform('com.google.firebase:firebase-bom:31.3.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.code.gson:gson:2.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.orhanobut:dialogplus:1.11@aar'
+    ///// Network Library API Handler ////////////
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.google.android.material:material:1.8.0-rc01'
+    ///////PICASSO Image Loader////
+    implementation 'com.squareup.picasso:picasso:2.8'
+    //////////////MPCharts and Graph //////////////
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+//    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    //////////////For Biometrics///////////////////////////////
+    implementation "androidx.biometric:biometric:1.1.0"
+    ////////////////////////////////////////
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    ///////////ToolTips///////////
+    implementation 'com.fenchtose:tooltip:0.1.6'
+
+    implementation 'com.github.emreesen27:Android-Nested-Progress:v1.0.2'
+
+    implementation 'com.github.mukeshsolanki.android-otpview-pinview:otpview-compose:3.1.0'
+    implementation 'com.github.mukeshsolanki.android-otpview-pinview:otpview:3.1.0'
+}

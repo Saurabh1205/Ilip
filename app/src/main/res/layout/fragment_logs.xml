@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.fees.logs.LogsFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Online Transaction Log"
+            android:padding="5dp"
+            android:textAlignment="center"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="0dp">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:fitsSystemWindows="true"
+        android:src="@drawable/legends_sts"
+        android:contentDescription="TODO" />
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:orientation="horizontal">
+    <TextView
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.25"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:text="Status"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/Text_color"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+            android:text="Transaction No"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textColor="@color/theme_color_student"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+            android:text="OrderNo.&amp; Date"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bank Ref. No"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:layout_weight="1.15"/>
+    <TextView
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Amount/ Receipt No."
+        android:gravity="center"
+        android:textSize="14sp"
+        android:layout_weight="1.15"/>
+</LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="@color/ColorGrey"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_view_Logs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <com.sn.lib.NestedProgress
+        android:id="@+id/custom_Loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:innerAnimInterpolator="anticipate"
+        app:outerAnimInterpolator="overshoot"
+        app:outerLoaderAnimDuration="1500"
+        />
+
+</FrameLayout>

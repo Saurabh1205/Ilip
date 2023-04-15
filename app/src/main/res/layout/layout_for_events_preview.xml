@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar4EventsPreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="0dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_new"
+            />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1sp"
+            android:background="@color/ColorGrey"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="Nagpur"
+                    android:drawablePadding="5dp"
+                    android:drawableLeft="@drawable/ic_baseline_location_on_24"/>
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12 jab 2022"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:textSize="12sp"
+                    android:drawablePadding="5dp"
+                    android:drawableLeft="@drawable/ic_baseline_calendar_24"/>
+            </LinearLayout>
+            <TextView
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="One of the nice things that recently was introduced in "/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/imageListEvent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:id="@+id/eventDescription"
+                android:text="One of the nice things that recently was introduced in the Android world in devSummit19 was the new way of handling back presses in the fragments which always was a bit of pain to implement. Previously if a fragment let’s say a SearchFragment needed to respond to back press events and close the SearchView, we had to go through all the steps as below:
+                One of the nice things that recently was introduced in the Android world in devSummit19 was the new way of handling back presses in the fragments which always was a bit of pain to implement. Previously if a fragment let’s say a SearchFragment needed to respond to back press events and close the SearchView, we had to go through all the steps as below:"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

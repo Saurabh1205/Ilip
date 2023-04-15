@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/registration_student_bg"
+    android:id="@+id/layoutRest"
+    tools:context=".activities.loginRegistrtionActivitys.ResetPinActivity"
+    android:orientation="vertical">
+   <!-- <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar4ResetPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:titleTextColor="@color/white"
+        >
+       &lt;!&ndash; <TextView
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/resetpinTitle"
+            android:textColor="#4f4f4f"
+            android:textSize="25dp" />&ndash;&gt;
+
+    </com.google.android.material.appbar.MaterialToolbar>
+   -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="0.80">
+        <ImageView
+            android:id="@+id/resetLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/sashalogo4x"
+            android:contentDescription="TODO" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:padding="10dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fourDigitOldPin"
+                    android:textColor="#4f4f4f"
+                    android:layout_gravity="center"
+                    android:textSize="14dp"
+                    android:padding="5dp"
+                    />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true">
+
+                <com.example.ilip.common.OtpView
+                    android:id="@+id/ed_OdlPIN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:itemBackground="@drawable/bg_otp_item"
+                    android:textColor="#000"
+                    android:focusable="false"
+                    app:OtpHideLineWhenFilled="true"
+                    app:OtpMaskingChar="*"
+                    app:OtpItemCount="4"
+                    app:OtpItemHeight="45dp"
+                    app:OtpItemSpacing="8dp"
+                    app:OtpItemWidth="45dp"
+                    app:OtpLineColor="@color/otp_item_state"
+                    app:OtpState_filled="true"
+                    app:OtpViewType="line"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+        </LinearLayout><LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:padding="10dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fourDigitNewPin"
+                    android:textColor="#4f4f4f"
+                    android:layout_gravity="center"
+                    android:textSize="14dp"
+                    android:padding="5dp"
+                    />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true">
+
+                <com.example.ilip.common.OtpView
+                    android:id="@+id/ed_NewPINReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:itemBackground="@drawable/bg_otp_item"
+                    android:textColor="#000"
+                    app:OtpHideLineWhenFilled="true"
+                    app:OtpItemCount="4"
+                    app:OtpItemHeight="45dp"
+                    app:OtpItemSpacing="8dp"
+                    app:OtpItemWidth="45dp"
+                    app:OtpLineColor="@color/otp_item_state"
+                    app:OtpState_filled="true"
+                    app:OtpViewType="line"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:padding="10dp">
+            <TextView
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Re-Enter PIN"
+                android:textColor="#4f4f4f"
+                android:textSize="14dp"
+                android:padding="5dp"
+                />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true">
+
+                <com.example.ilip.common.OtpView
+                    android:id="@+id/ed_reTypePinReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:itemBackground="@drawable/bg_otp_item"
+                    android:textColor="#000"
+                    app:OtpMaskingChar="*"
+                    app:OtpHideLineWhenFilled="true"
+                    app:OtpItemCount="4"
+                    app:OtpItemHeight="45dp"
+                    app:OtpItemSpacing="8dp"
+                    app:OtpItemWidth="45dp"
+                    app:OtpLineColor="@color/otp_item_state"
+                    app:OtpState_filled="true"
+                    app:OtpViewType="line"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="20dp"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submitBtnReset"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:fontFamily="sans-serif"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.20"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Powered by "
+            android:textColor="@color/ColorGrey"
+            android:fontFamily="sans-serif"
+            android:textSize="16sp" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/companylogo2x"
+            android:gravity="center"
+            android:textColor="@color/ColorGrey"
+            android:fontFamily="sans-serif"
+            android:text="@string/company_name"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>
